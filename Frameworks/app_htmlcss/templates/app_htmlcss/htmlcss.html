@@ -1,0 +1,231 @@
+{% extends 'app_home/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    html/css
+{% endblock %}
+
+{% block content %}
+    <link rel = "stylesheet" href = "{%  static 'style/list.css'%}">
+    <div id="topo"></div>
+    <h1>Módulo HTML/CSS</h1>
+    <ol>
+        <li>
+            <a href = "#html">HTML</a>            
+            <ol>
+                <li>
+                    <a href = "#intro-html">Introdução ao HTML</a>                    
+                </li>
+                <li>
+                    <a href = "#estrutura">Estrutura de um documento HTML</a>                    
+                </li>
+                <li>
+                    <a href = "#listas">Listas e Links</a>                    
+                </li>
+                <li>
+                    <a href = "#tabelas">Tabelas</a>                    
+                </li>
+                <li>
+                    <a href = "#tag">Principais TAGs</a>                    
+                </li>
+            </ol>
+        </li>
+        
+        <li>
+            <a href = "#css">CSS</a>            
+            <ol>
+                <li>
+                    <a href = "#intro-css">O que é CSS</a>                    
+                </li>
+                <li>
+                    <a href = "#cores">Cores</a>                    
+                </li>
+                <li>
+                    <a href = "#fontes">Fontes</a>                    
+                </li>
+            </ol>
+        </li>        
+    </ol>
+
+    <div class = "container-fluid">
+
+    
+    <div id = "html"  class = "secao">
+        <h4>1 - HTML</h4>
+
+        <p>
+            HTML (HyperText Markup Language) é a linguagem de marcação padrão utilizada para criar e estruturar páginas web. Desenvolvido por Tim Berners-Lee no início dos anos 1990, o HTML é a espinha dorsal de praticamente todos os sites da internet, permitindo que conteúdos como textos, imagens, vídeos e links sejam organizados de forma lógica e acessível nos navegadores.            
+        </p>
+
+        <p>
+            A principal função do HTML é estruturar o conteúdo de uma página web. Ele define a hierarquia e a disposição dos elementos visíveis ao usuário, como títulos, parágrafos, listas, tabelas, formulários e botões. O HTML atua como um "esqueleto" do site, enquanto outras tecnologias, como CSS (Cascading Style Sheets) e JavaScript, cuidam da apresentação visual e da interatividade, respectivamente.
+        </p>
+
+        <p>
+            Quando um navegador (como Chrome, Firefox ou Safari) carrega uma página, ele interpreta o código HTML e o renderiza na tela, seguindo as instruções de marcação para exibir cada elemento corretamente.
+        </p>
+
+        
+       <ol class = "lista-interna">
+        <h5>Principais Características do HTML</h5>
+        <li>
+            <span  class = "span-ol-subtitle">Linguagem de Marcação, não de Programação</span><br>
+            <span class = "span-paragrafo-ol">
+                O HTML não é uma linguagem de programação, pois não possui lógica de decisão ou loops. Ele é composto por tags (etiquetas) que "marcam" o conteúdo para indicar ao navegador como ele deve ser exibido.
+            </span>            
+        </li>
+        <li>
+            <span  class = "span-ol-subtitle"> Estrutura Hierárquica (em Árvore) </span>       <br>
+            <span  class = "span-paragrafo-ol">
+                Os elementos HTML são organizados em uma estrutura de árvore, com um elemento raiz (&lt;html&gt;) que contém outros elementos aninhados, como &lt;head&gt; e &lt;body&gt;. Essa hierarquia é essencial para a correta interpretação e renderização.
+            </span>            
+        </li>
+
+        <li>
+            <span  class = "span-ol-subtitle">Uso de Tags e Atributos</span> <br>
+            <span  class = "span-paragrafo-ol">
+                As tags são os blocos de construção do HTML, escritas entre colchetes angulares, como &lt;p&gt; para parágrafos e &lt;h1&gt; para títulos. As tags podem ter atributos que adicionam informações extras, como id, class, src (para imagens) ou href (para links).
+            </span>            
+        </li>
+
+        <li>
+            <span  class = "span-ol-subtitle">Semântica</span> <br>
+            <span  class = "span-paragrafo-ol">
+                O HTML moderno (a partir do HTML5) dá grande ênfase à semântica, ou seja, ao uso de tags que descrevem o significado do conteúdo, como &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt; e &lt;footer&gt;. Isso melhora a acessibilidade e o SEO (otimização para mecanismos de busca).
+            </span>
+        </li>
+
+        <li>
+            <span  class = "span-ol-subtitle">Compatibilidade com Outras Tecnologias</span> <br>
+            <span  class = "span-paragrafo-ol">
+                O HTML trabalha em conjunto com CSS e JavaScript. O CSS controla a aparência (cores, fontes, layout), enquanto o JavaScript adiciona comportamento dinâmico (animações, validações, requisições). Além disso, o HTML é compatível com APIs como canvas, geolocalização e armazenamento local.
+            </span>
+        </li>
+
+        <li>
+            <span  class = "span-ol-subtitle">Acessibilidade</span> <br>
+            <span  class = "span-paragrafo-ol">
+                Com o uso adequado de atributos como alt (em imagens), aria-label e tags semânticas, o HTML permite que pessoas com deficiências visuais ou motoras utilizem leitores de tela e outros recursos assistivos, tornando a web mais inclusiva.
+            </span>
+        </li>
+
+        <li>
+            <span  class = "span-ol-subtitle">Extensibilidade e Evolução Constante</span> <br>
+            <span  class = "span-paragrafo-ol">
+                O HTML está em constante evolução, com novas versões e especificações sendo lançadas pelo W3C (World Wide Web Consortium) e pela WHATWG. O HTML5, lançado em 2014, trouxe suporte nativo a áudio, vídeo, gráficos vetoriais e armazenamento offline, entre outros recursos.
+            </span>
+        </li>
+
+        <li>
+            <span  class = "span-ol-subtitle">Simplicidade e Facilidade de Aprendizado</span> <br>
+            <span  class = "span-paragrafo-ol">
+                Uma das maiores vantagens do HTML é a sua curva de aprendizado suave. Qualquer pessoa pode começar a criar páginas web com poucas linhas de código, o que o torna a porta de entrada ideal para o desenvolvimento web.
+            </span>
+        </li>
+
+        <li>
+            <span  class = "span-ol-subtitle">Responsividade e Design Adaptável</span> <br>
+            <span  class = "span-paragrafo-ol">
+                Embora a responsividade seja mais associada ao CSS, o HTML suporta o uso de meta tags como viewport, que ajudam a ajustar a página para diferentes tamanhos de tela (mobile, tablet, desktop).
+            </span>
+        </li>
+       </ol>
+
+       <p>
+        O HTML é muito mais do que um conjunto de tags — é o alicerce sobre o qual toda a web moderna é construída. Sua função essencial de estruturar informações, combinada com características como semântica, acessibilidade e integração com CSS e JavaScript, faz dele uma ferramenta indispensável para qualquer pessoa que deseje atuar no universo do desenvolvimento web. Dominar o HTML é o primeiro e mais importante passo para construir experiências digitais ricas, funcionais e acessíveis.
+       </p>
+
+
+
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "intro-html"  class = "secao">
+        <h4>1.2 - Introdução ao HTML</h4>
+        <p>Conteúdo L...</p>
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "estrutura"  class = "secao">
+        <h4>1.3 - Estrutura de um documento HTML</h4>
+        <p>Conteúdo ...</p>
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "listas"  class = "secao">
+        <h4>1.4 -  Listas e Links</h4>
+        <p>Conteúdo ...</p>
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "tabelas"  class = "secao">
+        <h4>1.5 - Tabelas</h4>
+        <p>Conteúdo ...</p>
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "tag"  class = "secao">
+        <h4>1.6 - Principais TAGs</h4>
+        <p>Conteúdo ...</p>
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "html"  class = "secao">
+
+    </div>
+
+    <div id = "css"  class = "secao">
+        <h4>2 - CSS</h4>
+        <p>Conteúdo ...</p>
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "css"  class = "secao">
+        <h4>2 - CSS</h4>
+        <p>Conteúdo ...</p>
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "intro-css"  class = "secao">
+        <h4>2 - O que é CSS</h4>
+        <p>Conteúdo ...</p>
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "css"  class = "secao">
+        <h4>2.1 - CSS</h4>
+        <p>Conteúdo ...</p>
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "cores"  class = "secao">
+        <h4>2.2 - Cores</h4>
+        <p>Conteúdo ...</p>
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "fontes"  class = "secao">
+        <h4>2.3 - Fontes</h4>
+        <p>Conteúdo ...</p>
+
+        <a href = "#topo">Voltar ao topo</a>
+    </div>
+
+    <div id = "css"  class = "secao">
+        
+    </div>
+
+    </div>
+{% endblock %}

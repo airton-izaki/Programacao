@@ -1,0 +1,111 @@
+/* ==========================================
+   ESTILIZAÇÃO DA BARRA LATERAL (SIDEBAR)
+   ========================================== */
+
+.icon_logo {
+    width: 20px;             /* Largura ideal para ícones de menu */
+    height: 20px;            /* Altura idêntica para manter a proporção quadrada (1:1) */
+    object-fit: contain;     /* Garante que a imagem não fique esticada ou distorcida */
+    margin-right: 0.6rem;    /* Espaçamento perfeito entre o logo e o texto do link */
+    vertical-align: middle;  /* Alinha o logo perfeitamente ao meio da linha do texto */
+    position: relative;
+    top: -2px;               /* Ajuste fino para alinhar perfeitamente com a altura das letras */
+    
+}
+
+.custom-sidebar {
+    background-color: blue; /* Equivalente ao bg-dark */
+    color: #ffffff;
+    padding: 1rem;
+    min-height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Link da Marca / Logo */
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.sidebar-brand:hover {
+    color: #f8f9fa;
+}
+
+/* Divisor (Linha Horizontal) */
+.sidebar-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 1rem;
+}
+
+/* Lista principal de navegação */
+.sidebar-nav {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    margin-bottom: 0.25rem;
+}
+
+/* Links dos Menus Principais (Linguagens/Frameworks) */
+.nav-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s ease;
+}
+
+.nav-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+/* Ícones */
+.icon-margin {
+    margin-right: 0.5rem;
+}
+
+.arrow-icon {
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+/* Rotaciona a setinha automaticamente quando o menu expandir */
+.nav-toggle[aria-expanded="true"] .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Submenus (Filhos) */
+.submenu-list {
+    list-style: none;
+    padding-left: 1.5rem; /* Recuo para a direita */
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.submenu-link {
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    padding: 0.375rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 0.25rem;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.submenu-link:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+}

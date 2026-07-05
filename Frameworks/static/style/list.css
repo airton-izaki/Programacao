@@ -1,0 +1,61 @@
+ol {
+    counter-reset: item;
+    list-style-type: none;
+}
+li {
+    list-style: none; /* Remove o marcador padrão da lista */
+    padding-left: 0;  /* Remove o padding padrão */
+}
+ol > li {
+    counter-increment: item;
+    margin-bottom: 5px;
+    
+}
+ol > li::before {
+    content: counter(item) ". ";
+    font-weight: bold;
+}
+ol ol {
+    counter-reset: subitem;
+    list-style-type: none;
+}
+ol ol > li {
+    counter-increment: subitem;
+    margin-left: 20px;
+}
+ol ol > li::before {
+    content: counter(item) "." counter(subitem) ". ";
+    font-weight: normal;
+}
+ a {
+    text-decoration: none; 
+    color: #0066cc;
+}
+a:hover {
+    text-decoration: underline;
+    color: #004499;
+}
+
+.container {
+    margin: 400px auto 50px;    
+}
+
+.lista-interna {
+    margin: 50px;
+    text-align: justify;
+}
+
+.lista-interna li {
+    margin: 20px;
+}
+
+.span-ol-subtitle {    
+    font-weight: bold; 
+    margin-left: 10px;
+}
+
+.span-paragrafo-ol {
+   display: block;
+   margin-left: 24px;
+   
+}

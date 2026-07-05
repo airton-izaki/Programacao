@@ -1,0 +1,95 @@
+
+
+{% load static %}
+
+
+{% block content %}
+   
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <nav class="col-md-3 col-lg-2 d-md-block custom-sidebar">
+    <a href="{% url 'index' %}" class="sidebar-brand">
+        <span>Programação</span>
+    </a>
+    <hr class="sidebar-divider">
+    
+    <ul class="sidebar-nav">
+        
+         <li class="nav-item">
+            <a class="nav-toggle" data-bs-toggle="collapse" href="#menuHome" role="button" aria-expanded="false" aria-controls="menuHome">
+                <span><i class="bi bi-house icon-margin"></i> Página Inicial</span>
+                <i class="bi bi-chevron-down arrow-icon"></i>
+            </a>
+            <div class="collapse" id="menuHome">
+                <ul class="submenu-list">
+                    
+                    <li>
+                        <a href = "{% url 'index' %}" class="submenu-link">Sobre</a>
+                    </li>
+                    <li>
+                        <a href = "*" class = "submenu-link">Contato</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-toggle" data-bs-toggle="collapse" href="#menuLinguagens" role="button" aria-expanded="false" aria-controls="menuLinguagens">
+                <span><i class="bi bi-code-slash icon-margin"></i> Linguagens</span>
+                <i class="bi bi-chevron-down arrow-icon"></i>
+            </a>
+            <div class="collapse" id="menuLinguagens">
+                <ul class="submenu-list">
+                    
+                    <li>
+                        <a href = "{% url 'htmlcss' %}" class="submenu-link">
+                           <img class = "icon_logo" src = "{% static 'image/logo_html.png' %}" alt = "logo_html">
+                            HTML / CSS
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "{% url 'javascript' %}" class = "submenu-link">
+                            <img class = "icon_logo" src = "{% static 'image/logo_js.png' %}" alt = "logo_js">
+                            JavaScript</a>
+                    </li>
+                    <li>
+                        <a href = "{% url 'python' %}" class = "submenu-link">
+                            <img class = "icon_logo" src = "{% static 'image/logo_python.png' %}" alt = "logo_python">
+                            Python
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-toggle" data-bs-toggle="collapse" href="#menuFrameworks" role="button" aria-expanded="false" aria-controls="menuFrameworks">
+                <span><i class="bi bi-box-seam icon-margin"></i> Frameworks</span>
+                <i class="bi bi-chevron-down arrow-icon"></i>
+            </a>
+            <div class="collapse" id="menuFrameworks">
+                <ul class="submenu-list">
+                    <li>
+                        <a href = "{% url 'angular' %}" class = "submenu-link">
+                            <img class = "icon_logo" src = "{% static 'image/logo_angular.png' %}" alt = "logo_angular">
+                            Angular
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "{% url 'vue' %}" class = "submenu-link">
+                            <img class = "icon_logo" src = "{% static 'image/logo_vue.png' %}" alt = "logo_vue">
+                            Vue.js
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "{% url 'django' %}" class = "submenu-link">
+                            <img class = "icon_logo" src = "{% static 'image/logo_django.png' %}" alt = "logo_django">
+                            Django
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+    </ul>
+</nav>
+{% endblock %}
